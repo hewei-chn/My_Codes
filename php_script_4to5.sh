@@ -25,9 +25,6 @@ fi
 BACKUPDIR=$2
 LOGS=$2/`basename ${1}`.done
 
-echo $LOGS
-exit 1;
-
 cp $1 ${BACKUPDIR}/
 
 for file in `cat $1 | grep php$`; do
