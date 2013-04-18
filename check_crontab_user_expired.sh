@@ -19,25 +19,25 @@ if [ ! -d "/var/spool/cron/" ]; then
 	exit 0;
 fi
 
-for file in `ls /var/spool/cron/`; do
-	echo -ne "checking $file ...\t\t"
-	COMMANDS=`cat /var/spool/cron/$file | grep -v ^$ | grep -v ^MAILTO | grep -v ^# | wc -l`
+for user in `ls /var/spool/cron/`; do
+	echo -ne "checking $user ...\t\t"
+	COMMANDS=`cat /var/spool/cron/$user | grep -v ^$ | grep -v ^MAILTO | grep -v ^# | wc -l`
 	if [ $COMMANDS -eq 0 ];then
 		echo " No Commands in crontab, Skip it."
 		continue;
 	fi
-	chage -l $file >/dev/null 2>&1
+	chage -l $user >/dev/null 2>&1
 	if [ $? != 0 ];then
 		echo "Failed to Check account info with RetCode $?, Skip it."
 		continue;
 	fi
-	EXPINFO=`chage -l $file | grep -E ^"(Password|Account) expires" | grep -v never$`
+	EXPINFO=`chage -l $user | grep -E ^"(Password|Account) expires" | grep -v never$`
 	if [ ${#EXPINFO} -eq 0 ]; then
 		echo "User Will Nerver Expired. Go to Next.."
 		continue;
 	else
 		echo -n "Set Password And Account Expired to -1(never expired)..."
-		chage -M -1 -E -1 $file
+		chage -M -1 -E -1 $user
 		echo "Done"
 	fi
 done
