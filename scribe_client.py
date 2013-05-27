@@ -365,12 +365,14 @@ if __name__ == '__main__':
 	parse_args()
 	fname = options.file
 
-	datapath=os.path.dirname(os.path.realpath(sys.argv[0]))
+	datapath=os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), "..", "data")
+	if (not os.path.isdir(datapath)):
+		os.mkdir(datapath)
 	if (options.rotate == 2):
 		datafilename=os.path.basename(fname)[0:os.path.basename(fname).rindex('.')]+".data"
 	else:
 		datafilename=os.path.basename(fname)+".data"
-	DATAFILE=os.path.join(datapath, "..", "data", datafilename)
+	DATAFILE=os.path.join(datapath, datafilename)
 
 	if (options.continue_flag):
 		if (os.path.exists(DATAFILE) and os.path.getsize(DATAFILE) > 0):
