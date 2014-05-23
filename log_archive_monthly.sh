@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Created by weihe#corp.netease.com 20130108
+# Created by hewei.chn#gmail.com 20130108
 # Use This Script to Archive logs monthly in gzip mode and back the orig log files in lastmonth dir.
 # Version v0.1
 # You should Add this script in your crontab or run it every month.

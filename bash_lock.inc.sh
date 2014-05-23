@@ -1,5 +1,5 @@
 #!/bin/bash
-# weihe#corp.netease.com 2013.04.09
+# hewei.chn#gmail.com 2013.04.09
 # Single Run Lock Implement.
 # Version 0.1
 

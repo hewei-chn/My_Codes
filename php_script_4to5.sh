@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Created by weihe#corp.netease.com 20130228
+# Created by hewei.chn#gmail.com 20130228
 # Use This Script to Add Script Type for php Scripts.
 # Version v0.1
 # Usage: Generate Filelist with find or Something else.

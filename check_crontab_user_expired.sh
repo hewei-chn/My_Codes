@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Created by weihe#corp.netease.com 20130315
+# Created by hewei.chn#gmail.com 20130315
 # Use This Script to Make Sure that Users who have crontab to run will not expired.
 # Version v0.1
 # You should Run This Script once if you not sure about the user expired info with root permisson.

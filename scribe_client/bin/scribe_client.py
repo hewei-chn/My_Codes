@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-# weihe#corp.netease.com
+# hewei.chn#gmail.com
 # A scribe client to update logs.
 
 import os

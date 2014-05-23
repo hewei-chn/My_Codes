@@ -1,6 +1,6 @@
 /**************************************************************************
  * Nagios Plugin to Check User Password Expiration stat.
- * Created by weihe#corp.netease.com 20130228
+ * Created by hewei.chn#gmail.com 20130228
  * Version v0.1
  * Usage: ./a.out                                  to check all users.
  *        ./a.out user_a user_b user_and_so_on     to check a list of users.
